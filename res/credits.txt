@@ -1,0 +1,25 @@
+<p style="text-align:center; justify-content:center;">
+-------------------------<br>
+CRÉDITS<br>
+-------------------------<br>
+<br>
+Équipe de traduction de<br>
+The Chronicles of Ace Attorney: A Great Era<br>
+<br>
+<b>Chef de projet</b><br>
+Choky<br>
+<br>
+<b>Traduction</b><br>
+Choky, n0vatique<br>
+<br>
+<b>Romhack, programmation, outils</b><br>
+Aclios, Benji99<br>
+<br>
+<b>Graphismes</b><br>
+Alexane B., Jau, Kikoro, n0vatique, Tolita, Tox, Aclios, Choky<br>
+<br>
+<b>Tests et relecture</b><br>
+Alexandre Ad, Alexane B., Aude-Amélie T.,
+Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
+Ronano, Aclios, n0vatique, mondher, Magaster
+</p>

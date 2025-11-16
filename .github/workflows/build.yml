@@ -1,0 +1,99 @@
+name: Build des patcheurs
+
+on:
+  push:
+      tags:
+        - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        include:
+          - os: windows-latest
+            path: windows
+            ext: .exe
+            finalext: .exe
+            name: windows
+          - os: ubuntu-latest
+            path: Linux
+            ext: ''
+            finalext: ''
+            name: ubuntu
+          - os: macos-latest
+            path: macOSarm
+            ext: '.app'
+            finalext: .app.zip
+            name: macos
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.13
+
+      - name: Installation des dépendances
+        run: pip install -r requirements.txt pyinstaller
+
+      - name: Copie des outils
+        run: cp -r _cltools/${{ matrix.path }} cltools
+        shell: bash
+
+      - name: Build avec PyInstaller
+        run: pyinstaller main.spec
+        shell: bash
+
+      - name: Renommer pour l'upload
+        run: cp -R dist/patcheur${{ matrix.ext }} patcheur_${{ matrix.name }}${{ matrix.ext }}
+
+      - name: Archive du folder app sur macOS
+        if: matrix.os == 'macos-latest'
+        run: zip -r patcheur_${{ matrix.name }}${{ matrix.ext }}.zip patcheur_${{ matrix.name }}${{ matrix.ext }}
+
+      - name: Upload des patcheurs
+        uses: actions/upload-artifact@v4
+        with:
+          name: patcheur_${{ matrix.name }}
+          path: patcheur_${{ matrix.name }}${{ matrix.finalext }}
+
+  release:
+    name: GitHub Release
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Téléchargement des bundles
+        uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts
+
+      - name: Zip de luma
+        run: zip -r luma.zip luma
+
+      - name: Rassemblement des bundles
+        run: |
+          mkdir release
+          cp ./artifacts/patcheur_ubuntu/* ./release/
+          cp ./artifacts/patcheur_windows/* ./release/
+          cp ./artifacts/patcheur_macos/* ./release/
+          cp ./luma.zip ./release/
+
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          body_path: RELEASE_NOTES.md
+          files: release/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

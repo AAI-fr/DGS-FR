@@ -1,0 +1,8 @@
+BasicInfo:
+  CompanyCode             : 00
+  ProductCode             : CTR-M-AJ2J-00
+  ContentType             : Application # Application / SystemUpdate / Manual / Child / Trial
+
+TitleInfo:
+  UniqueId                : 0x000f14ad
+  Category                : AddOnContents # Application / SystemApplication / Applet / Firmware / Base / DlpChild / Demo / Contents / SystemContents / SharedContents / AddOnContents / Patch / AutoUpdateContents

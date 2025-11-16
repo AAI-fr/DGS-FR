@@ -1,0 +1,7 @@
+Option:
+  UseOnSD                 : true # true if App is to be installed to SD
+  FreeProductCode         : true # Removes limitations on ProductCode
+  MediaFootPadding        : false # If true CCI files are created with padding
+  EnableCrypt             : false # Enables encryption for NCCH and CIA
+SystemControlInfo:
+  SaveDataSize: $(SaveSize)K

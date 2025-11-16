@@ -1,0 +1,9 @@
+*.pyc
+*.nsp
+*.cia
+*.aapatch
+prod.keys
+log.txt
+build
+dist
+cltools

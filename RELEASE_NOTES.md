@@ -1,0 +1,3 @@
+- Traduction intégrale de DGS1
+- 3DS : DLC traduits, à l'exception des vidéos
+- HD : Contenu spécial traduit
