@@ -40,4 +40,15 @@ def check_rom(rom_path : str, id : int):
         if rom_id != id:
             raise InvalidRomId(f"Erreur : l'id de la rom n'est pas bonne. Assurez-vous d'avoir sélectionné la bonne rom.\nId de la rom : {hex(rom_id)}\nAttendu : {hex(id)}")
         return True
-          
+    
+def get_correct_cci_apps(root_dir : str):
+    main_app = None
+    manual_app = None
+    for file in Path(root_dir).iterdir():
+        if file.is_file() and file.suffix == '.app' and file.name.startswith('00_'): 
+            main_app = file.name
+        if file.is_file() and file.suffix == '.app' and file.name.startswith('01_'): 
+            manual_app = file.name
+    if not main_app or not manual_app:
+        raise Exception("Erreur lors de l'extraction de la ROM : les apps n'ont pas pu être localisées")
+    return main_app, manual_app
