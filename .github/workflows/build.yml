@@ -77,8 +77,8 @@ jobs:
         with:
           path: ./artifacts
 
-      - name: Zip de luma
-        run: zip -r luma.zip luma
+      - name: Zip manuels et jaquettes
+        run: zip -r manuels_jaquettes.zip manuels_jaquettes
 
       - name: Rassemblement des bundles
         run: |
@@ -86,7 +86,7 @@ jobs:
           cp ./artifacts/patcheur_ubuntu/* ./release/
           cp ./artifacts/patcheur_windows/* ./release/
           cp ./artifacts/patcheur_macos/* ./release/
-          cp ./luma.zip ./release/
+          cp ./manuels_jaquettes.zip ./release/
 
       - name: GitHub Release
         uses: softprops/action-gh-release@v2

@@ -46,7 +46,7 @@ class CtrWidget(QWidget):
             self.info = DGS2_Info()
         self.patch_path = patch_path
         self.game_explorer = FileExplorer('Sélectionnez la ROM japonaise du jeu', self.get_game_path)
-        self.dlc_explorer = FileExplorer('Sélectionnez la ROM DLC japonaise du jeu', self.get_dlc_path)
+      #  self.dlc_explorer = FileExplorer('Sélectionnez la ROM DLC japonaise du jeu', self.get_dlc_path)
         im = QImage(self.info.logo_path)
         layout = QVBoxLayout()
         self.button = QPushButton("C'est parti !")
@@ -57,7 +57,7 @@ class CtrWidget(QWidget):
         nav = Navigation()
         layout.addWidget(im)
         layout.addWidget(self.game_explorer)
-        layout.addWidget(self.dlc_explorer)
+      #  layout.addWidget(self.dlc_explorer)
         layout.addWidget(self.button)
         layout.addWidget(self.log)
         layout.addWidget(nav)

@@ -1,3 +1,6 @@
-- Traduction intégrale de DGS1
-- 3DS : DLC traduits, à l'exception des vidéos
-- HD : Contenu spécial traduit
+Version initiale.
+
+### Contenu
+
+- 3DS : le premier jeu entièrement traduit.
+- HD (Steam, Switch) : le premier jeu et le contenu spécial entièrement traduits
