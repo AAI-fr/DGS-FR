@@ -49,6 +49,6 @@ def get_correct_cci_apps(root_dir : str):
             main_app = file.name
         if file.is_file() and file.suffix == '.app' and file.name.startswith('01_'): 
             manual_app = file.name
-    if not main_app or not manual_app:
-        raise Exception("Erreur lors de l'extraction de la ROM : les apps n'ont pas pu être localisées")
+    if not main_app:
+        raise Exception("Erreur lors de l'extraction de la ROM : le ncch0 n'a pas pu être localisé")
     return main_app, manual_app

@@ -48,7 +48,7 @@ Une fois le patch terminé, vous pouvez simplement lancer le jeu, qui sera en fr
 - Les clefs de déchiffrements du firmware de la Switch (fichier souvent appelé prod.keys).
 - Une ROM du jeu (.nsp), que ce soit la version japonaise ou la version internationale. (Note : la version japonaise n'a été que très peu testée).
 
-Une fois le patch terminé, vous trouverez un dossier 010036e00fb20000 dans le même dossier que le patcheur. Copiez-le dans le dossier atmosphere/contents de votre carte SD. Si vous jouez avez la version japonaise, renommez le dossier en 0100d7f00fb1a000.
+Une fois le patch terminé, vous trouverez un dossier 010036e00fb20000 dans le même dossier que le patcheur. Copiez-le dans le dossier atmosphere/contents de votre carte SD. Si vous jouez avec la version japonaise, renommez le dossier en 0100d7f00fb1a000.
 
 ## Doublage
 

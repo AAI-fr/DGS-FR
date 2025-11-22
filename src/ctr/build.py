@@ -20,13 +20,14 @@ def build_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : st
         + logo_command 
         + ["-o", Path(input_dir, "c.0000.00000000")]
         , log)
-
+    emanual_command = []
+    if Path(input_dir, "c.0001.00000001").is_file():
+        emanual_command = ["-i", Path(input_dir, "c.0001.00000001:0001:00000001"),]
     run_cli([
         makerom_path, "-f", "cia", 
-        "-i", Path(input_dir, "c.0000.00000000:0000:00000000"), 
-        "-i", Path(input_dir, "c.0001.00000001:0001:00000001"),
-        "-o", dist_path
-        ], log)
+        "-i", Path(input_dir, "c.0000.00000000:0000:00000000")]
+        + emanual_command
+        + [ "-o", dist_path ], log)
     
 def build_dlc_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : str, files : list[str], log = None):
     for i, file in enumerate(files):
