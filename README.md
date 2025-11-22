@@ -76,6 +76,8 @@ Il n'y a pas de doublage français en jeu, mais nous avons implémenté un doubl
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
 Ronano, Aclios, n0vatique, Mondher, Magaster
 
+**Doublage** : Kirill Morunov
+
 **Jaquettes et manuels** : Anthiflo, Tolita
 
-**Remerciements** : Scarlet Study pour le travail effectué sur les formats du jeu, Ace Attorney Worldwide.
+**Remerciements** : Scarlet Study pour le travail effectué sur les formats du jeu, Ace Attorney Worldwide, Mr.LeoNov.

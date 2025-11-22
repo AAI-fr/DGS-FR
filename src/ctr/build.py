@@ -2,6 +2,11 @@ from pathlib import Path
 from src.utils import run_cli
 
 def build_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : str, log = None):
+    logo_command = []
+    if Path(input_dir, "logo.bin").is_file():
+        logo_command = ["-logo", Path(input_dir, "logo.bin")]
+    elif Path(input_dir, 'exefs', 'logo.bin').is_file():
+        logo_command = ["-logo", Path(input_dir, 'exefs', 'logo.bin')]
     run_cli([
         makerom_path, "-f", "ncch", "-target", "t",
         "-code", Path(input_dir, 'exefs', 'code.bin'),
@@ -10,8 +15,11 @@ def build_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : st
         "-rsf", Path(rsf_dir, 'ncch0.rsf'), 
         "-romfs", Path(input_dir, 'romfs.bin'), 
         "-exheader", Path(input_dir, 'exheader.bin'), 
-        "-o", Path(input_dir, "c.0000.00000000")
-        ], log)
+        "-plainrgn", Path(input_dir, 'plainrgn.bin')
+        ] 
+        + logo_command 
+        + ["-o", Path(input_dir, "c.0000.00000000")]
+        , log)
 
     run_cli([
         makerom_path, "-f", "cia", 

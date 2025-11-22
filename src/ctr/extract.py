@@ -11,6 +11,8 @@ def extract_cia(ctrtool_path : str, cia_path : str, tmp_path : str, log : String
                 f'--exheader={Path(tmp_path, 'exheader.bin')}',
                 f'--exefs={Path(tmp_path, 'exefs.bin')}', 
                 f'--romfs={Path(tmp_path, 'romfs.bin')}',
+                f'--plainrgn={Path(tmp_path, 'plainrgn.bin')}',
+                f'--logo={Path(tmp_path, 'logo.bin')}',
                 f'{Path(tmp_path, 'c.0000.00000000')}'
                 ], log)
     run_cli([ctrtool_path, '-t', 'exefs',
@@ -23,9 +25,11 @@ def extract_cci(ctrtool_path : str, cci_path : str, tmp_path : str, log = None):
     run_cli([ctrtool_path, '-t', 'cci', f'--contents={tmp_path}', cci_path], log)
     main_app, manual_app = get_correct_cci_apps(tmp_path)
     run_cli([ctrtool_path, '-t', 'ncch', 
-               f'--exheader={Path(tmp_path, 'exheader.bin')}',
+                f'--exheader={Path(tmp_path, 'exheader.bin')}',
                 f'--exefs={Path(tmp_path, 'exefs.bin')}', 
                 f'--romfs={Path(tmp_path, 'romfs.bin')}',
+                f'--plainrgn={Path(tmp_path, 'plainrgn.bin')}',
+                f'--logo={Path(tmp_path, 'logo.bin')}',
                 f'{Path(tmp_path, main_app)}'
                 ], log)
     run_cli([ctrtool_path, '-t', 'exefs',
