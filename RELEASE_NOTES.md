@@ -7,4 +7,5 @@ Hotfix patch 3DS
 
 ### Changements
 
-- Correction de problèmes avec le build 3DS
+- Correction de bugs bloquants vers la fin l'affaire 3
+- Correction d'un problème de texture dans l'affaire 5
