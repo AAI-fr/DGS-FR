@@ -1,5 +1,5 @@
 # The Chronicles of Ace Attorney: A Great Era
-Traduction française de Dai Gyakuten Saiban (The Great Ace Attorney Chronicles) pour la Nintendo 3DS, Steam et la Nintendo Switch. Pour toute question, problème, ou simplement pour discuter du jeu, rejoignez [le Discord](https://discord.gg/a4tFRwU8).
+Traduction française/Patch FR de Dai Gyakuten Saiban (The Great Ace Attorney Chronicles) pour la Nintendo 3DS, Steam et la Nintendo Switch. Pour toute question, problème, ou simplement pour discuter du jeu, rejoignez [le Discord](https://discord.gg/a4tFRwU8).
 
 ![Titre](titre.png)
 
@@ -72,12 +72,12 @@ Il n'y a pas de doublage français en jeu, mais nous avons implémenté un doubl
 
 **Graphismes** : Alexane B., Jau, Kikoro, N0vatique, Tolita, Tox, Aclios, Choky
 
-**Tests et relectures** : Alexandre Ad, Alexane B., Aude-Amélie T.
+**Tests et relectures** : Alexandre Ad, Alexane B., Aude-Amélie T.,
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
-Ronano, Aclios, n0vatique, Mondher, Magaster
+Ronano, Aclios, N0vatique, Mondher, Magaster
 
 **Doublage** : Kirill Morunov
 
 **Jaquettes et manuels** : Anthiflo, Tolita
 
-**Remerciements** : Scarlet Study pour le travail effectué sur les formats du jeu, Ace Attorney Worldwide, Mr.LeoNov.
+**Remerciements** : Scarlet Study pour le travail effectué sur les formats du jeu, Ace Attorney Worldwide, Mr.LeoNov
