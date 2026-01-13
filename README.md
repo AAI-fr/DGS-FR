@@ -1,5 +1,5 @@
 # The Chronicles of Ace Attorney: A Great Era
-Traduction française/Patch FR de Dai Gyakuten Saiban (The Great Ace Attorney Chronicles) pour la Nintendo 3DS, Steam et la Nintendo Switch. Pour toute question, problème, ou simplement pour discuter du jeu, rejoignez [le Discord](https://discord.gg/a4tFRwU8).
+Traduction française/Patch FR de Dai Gyakuten Saiban (The Great Ace Attorney Chronicles) pour la Nintendo 3DS, Steam et la Nintendo Switch. Pour toute question, problème, ou simplement pour discuter du jeu, rejoignez [le Discord](https://discord.gg/bye98cMs8S).
 
 ![Titre](titre.png)
 
