@@ -66,7 +66,7 @@ class AAPatchEntry:
     def get_patch_file(self, hash : bytes, flags : list[int]):
         files_with_correct_hash = [file for file in self.files if file.hash == hash and (file.flag in flags or file.flag == 0)]
         if len(files_with_correct_hash) == 0:
-            raise Exception(f'File {self.filepath}: no patch has a corresponding hash to the input file')
+            raise Exception(f"Fichier {self.filepath} : aucun patch correspond n'existe. Si vous patchez la version 3DS ou Switch, votre ROM ne semble pas valide. Si vous patchez la version Steam, rétablissez les fichiers d'origine puis réessayez.")
         if len(files_with_correct_hash) == 1:
             return files_with_correct_hash[0]
         else:
@@ -78,7 +78,7 @@ class AAPatchEntry:
         filehash = get_file_hash(filepath)
         files_with_correct_hash = [file for file in self.files if file.hash == filehash and (file.flag in flags or file.flag == 0)]
         if len(files_with_correct_hash) == 0:
-            raise Exception(f'File {self.filepath}: no patch has a corresponding hash to the input file')
+            raise Exception(f"Fichier {self.filepath} : aucun patch correspond n'existe. Si vous patchez la version 3DS ou Switch, votre ROM ne semble pas valide. Si vous patchez la version Steam, rétablissez les fichiers d'origine puis réessayez.")
         return filehash
     
     def should_patch(self, flags : list[int]):
