@@ -9,8 +9,8 @@ Le premier jeu est intégralement traduit.
 ### HD (Steam, Switch) :
 Le premier jeu est traduit (cinq premières affaires). Tout le contenu spécial est également traduit.
 ## Patcher le jeu
-Vous pouvez retrouver le dernier patch [juste ici](https://github.com/AAI-fr/DGS-FR/releases).
-Récupérez le patcheur de votre système d'exploitation ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
+Vous pouvez retrouver le dernier patch [juste ici](https://github.com/AAI-fr/DGS-FR/releases/latest).
+Récupérez le patcheur de votre système d'exploitation (si vous êtes sur macOS, lisez également [ceci](#patch-macos)) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
 
 À noter que le patcheur nécessite des versions de systèmes d'exploitations récentes. Nous essaierons de travailler sur une meilleure compatibilité dans le futur. En cas de problème, n'hésitez pas à nous contacter.
 
@@ -56,11 +56,27 @@ Il n'y a pas de doublage français en jeu, mais nous avons implémenté un doubl
 
 ## Bugs et problèmes connus
 
+### Patcher sur macOS
+
+Si en essayant de patcher une ROM sur macOS, vous obtenez l'erreur `[Errno 30] Read-only file system: 'log.txt'`, suivez ces étapes :
+
+- Extrayez le .app du .zip et déplacez-le vers un autre dossier que Downloads/Téléchargements (déplacer est nécessaire)
+- Clic droit sur patcheur_macos.app -> Nouveau terminal au dossier
+
+Dans le terminal : 
+- Exécutez `xattr -d -r com.apple.quarantine .` (cela permet d'enlever des restictions ajoutées aux fichiers téléchargés hors du store)
+- Exécutez `./Contents/macos/patcheur`. (pour lancer le patcheur)
+- Une fois le patch effectué, vous pourrez retrouver les fichiers patchés avec un clic droit sur patcheur_macos.app -> Afficher le contenu du paquet
+
 ### 3DS
 
-- Dans certains cas, le texte de l'historique disparaît. Nous ne pourrons très certainement jamais corriger ça, mais si besoin, sauvegarder puis charger la partie fait réapparaître le texte.
+- Dans certains cas, le texte de l'historique disparaît en partie. Si nécessaire, sauvegarder puis charger la partie fait réapparaître le texte.
 
 - Certains textes défilent très lentement lors des déductions.
+
+### Steam
+
+- Les succès/distinctions obtenus ne sont pas (et ne peuvent pas être) traduites. Cela ne s'applique pas à la version Switch qui implémente les distinctions directement dans le jeu.
 
 ## Crédits
 
@@ -76,7 +92,7 @@ Il n'y a pas de doublage français en jeu, mais nous avons implémenté un doubl
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
 Ronano, Aclios, N0vatique, Mondher, Magaster
 
-**Doublage** : Kirill Morunov
+**Doublage additionnel** : Kirill Morunov
 
 **Jaquettes et manuels** : Anthiflo, Tolita
 

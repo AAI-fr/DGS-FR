@@ -10,19 +10,25 @@ The Chronicles of Ace Attorney: A Great Era<br>
 Choky<br>
 <br>
 <b>Traduction</b><br>
-Choky, n0vatique<br>
+Choky, N0vatique<br>
 <br>
 <b>Romhack, programmation, outils</b><br>
 Aclios, Benji99<br>
 <br>
 <b>Graphismes</b><br>
-Alexane B., Jau, Kikoro, n0vatique, Tolita, Tox, Aclios, Choky<br>
+Alexane B., Jau, Kikoro, N0vatique, Tolita, Tox, Aclios, Choky<br>
 <br>
 <b>Tests et relecture</b><br>
 Alexandre Ad, Alexane B., Aude-Amélie T.,
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
-Ronano, Aclios, n0vatique, mondher, Magaster<br>
+Ronano, Aclios, N0vatique, Mondher, Magaster<br>
 <br>
-<b>Doublage</b><br>
+<b>Doublage additionnel</b><br>
 Kirill Morunov
+<br>
+<b>Jaquettes et manuels</b><br>
+Anthiflo, Tolita
+<br>
+<b>Remerciements</b><br>
+Scarlet Study pour le travail effectué sur les formats du jeu, Ace Attorney Worldwide, Mr.LeoNov
 </p>
