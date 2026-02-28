@@ -10,7 +10,7 @@ Le premier jeu est intégralement traduit.
 Le premier jeu est traduit (cinq premières affaires). Tout le contenu spécial est également traduit.
 ## Patcher le jeu
 Vous pouvez retrouver le dernier patch [juste ici](https://github.com/AAI-fr/DGS-FR/releases/latest).
-Récupérez le patcheur de votre système d'exploitation (si vous êtes sur macOS, lisez également [ceci](#patch-macos)) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
+Récupérez le patcheur de votre système d'exploitation (si vous êtes sur macOS, lisez également [ceci](#patcher-sur-macos)) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
 
 À noter que le patcheur nécessite des versions de systèmes d'exploitations récentes. Nous essaierons de travailler sur une meilleure compatibilité dans le futur. En cas de problème, n'hésitez pas à nous contacter.
 
@@ -76,7 +76,7 @@ Dans le terminal :
 
 ### Steam
 
-- Les succès/distinctions obtenus ne sont pas (et ne peuvent pas être) traduites. Cela ne s'applique pas à la version Switch qui implémente les distinctions directement dans le jeu.
+- Les distinctions (succès Steam) obtenues ne sont pas (et ne peuvent pas être) traduites. Cela ne s'applique pas à la version Switch qui implémente les distinctions directement dans le jeu. Vous pouvez tout de même retrouver vos distinctions traduites en français dans le Contenu Spécial.
 
 ## Crédits
 
