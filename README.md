@@ -10,7 +10,7 @@ Le premier jeu est intégralement traduit.
 Le premier jeu est traduit (cinq premières affaires). Tout le contenu spécial est également traduit.
 ## Patcher le jeu
 Vous pouvez retrouver le dernier patch [juste ici](https://github.com/AAI-fr/DGS-FR/releases/latest).
-Récupérez le patcheur de votre système d'exploitation (si vous êtes sur macOS, lisez également [ceci](#patcher-sur-macos)) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
+Récupérez le patcheur de votre système d'exploitation (Si vous êtes sur macOS, lisez également [ceci](#patcher-sur-macos). Si vous êtes sur Steam Deck, qui fonctionne sous Linux, utilisez patcheur_ubuntu) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
 
 À noter que le patcheur nécessite des versions de systèmes d'exploitations récentes. Nous essaierons de travailler sur une meilleure compatibilité dans le futur. En cas de problème, n'hésitez pas à nous contacter.
 
