@@ -6,6 +6,7 @@ import src.aapatch as aapatch
 from src.utils import uprint, resource_path
 
 WIN_DEFAULT_PATH = r'C:\Program Files (x86)\Steam\steamapps\common\TGAAC'
+STEAM_DECK_DEFAULT_PATH = r'/home/deck/.local/share/Steam/steamapps/common/TGAAC'
 
 class StmWidget(QWidget):
     game_root : str = ''
@@ -14,6 +15,8 @@ class StmWidget(QWidget):
         self.patch_path = patch_path
         if Path(WIN_DEFAULT_PATH, 'TGAAC.exe').exists():
             self.game_root = WIN_DEFAULT_PATH
+        elif Path(STEAM_DECK_DEFAULT_PATH, 'TGAAC.exe').exists():
+            self.game_root = STEAM_DECK_DEFAULT_PATH
         im = QImage(resource_path('res/logo.png'))
         self.explorer = FileExplorer("Sélectionnez le dossier d'installation du jeu", onPress=self.get_path)
         self.explorer.setText(self.game_root)
