@@ -26,7 +26,7 @@ jobs:
             path: Linux
             ext: ''
             finalext: ''
-            name: ubuntu
+            name: linux_steam_deck
           - os: macos-latest
             path: macOSarm
             ext: '.app'
