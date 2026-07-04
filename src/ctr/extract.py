@@ -17,6 +17,7 @@ def extract_cia(ctrtool_path : str, cia_path : str, tmp_path : str, log : String
                 ], log)
     run_cli([ctrtool_path, '-t', 'exefs',
                 f'--exefsdir={Path(tmp_path, 'exefs')}',
+                '--decompresscode',
                 f'{Path(tmp_path, 'exefs.bin')}'
                 ], log)
     
@@ -34,6 +35,7 @@ def extract_cci(ctrtool_path : str, cci_path : str, tmp_path : str, log = None):
                 ], log)
     run_cli([ctrtool_path, '-t', 'exefs',
                 f'--exefsdir={Path(tmp_path, 'exefs')}',
+                '--decompresscode',
                 f'{Path(tmp_path, 'exefs.bin')}'
                 ], log)
     if manual_app:

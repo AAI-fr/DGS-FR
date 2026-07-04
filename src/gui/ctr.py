@@ -46,7 +46,8 @@ class CtrWidget(QWidget):
             self.info = DGS2_Info()
         self.patch_path = patch_path
         self.game_explorer = FileExplorer('Sélectionnez la ROM japonaise du jeu', self.get_game_path)
-      #  self.dlc_explorer = FileExplorer('Sélectionnez la ROM DLC japonaise du jeu', self.get_dlc_path)
+        if game == 'DGS1':
+            self.dlc_explorer = FileExplorer('Sélectionnez la ROM DLC japonaise du jeu', self.get_dlc_path)
         im = QImage(self.info.logo_path)
         layout = QVBoxLayout()
         self.button = QPushButton("C'est parti !")
@@ -57,7 +58,8 @@ class CtrWidget(QWidget):
         nav = Navigation()
         layout.addWidget(im)
         layout.addWidget(self.game_explorer)
-      #  layout.addWidget(self.dlc_explorer)
+        if game == 'DGS1':
+            layout.addWidget(self.dlc_explorer)
         layout.addWidget(self.button)
         layout.addWidget(self.log)
         layout.addWidget(nav)
@@ -96,7 +98,7 @@ class CtrWidget(QWidget):
             if self.game_rom_path != '':
                 uprint('Extraction des fichiers...')
                 extract_rom(CTRTOOL, self.game_rom_path, Path(tmp_path, 'Game'), log=f)
-                uprint('Extraction  !')
+                uprint('Extraction terminée !')
             if self.dlc_rom_path != '':
                 uprint('Extraction des fichiers DLC...')
                 extract_dlc_rom(CTRTOOL, self.dlc_rom_path, Path(tmp_path, 'DLC'), self.info.dlc_files, log=f)
@@ -120,4 +122,3 @@ class CtrWidget(QWidget):
             f.close()
             if Path(tmp_path).is_dir():
                 shutil.rmtree(tmp_path)
-        
