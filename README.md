@@ -5,9 +5,13 @@ Traduction française/Patch FR de Dai Gyakuten Saiban (The Great Ace Attorney Ch
 
 ## Contenu du patch
 ### 3DS :
-Le premier jeu est intégralement traduit.
+- Premier jeu entièrement traduit.
+- DLC du premier jeu traduits, à l'exception des sous-titres des vidéos.
+- Deux premières affaires du second jeu traduites.
 ### HD (Steam, Switch) :
-Le premier jeu est traduit (cinq premières affaires). Tout le contenu spécial est également traduit.
+- Premier jeu entièrement traduit.
+- Deux premières affaires du second jeu traduites.
+- Contenu spécial entièrement traduit.
 ## Patcher le jeu
 Vous pouvez retrouver le dernier patch [juste ici](https://github.com/AAI-fr/DGS-FR/releases/latest).
 Récupérez le patcheur de votre système d'exploitation (Si vous êtes sur macOS, lisez également [ceci](#patcher-sur-macos). Si vous êtes sur Steam Deck, qui fonctionne sous Linux, utilisez patcheur_ubuntu) ainsi que le fichier .aapatch de la version que vous souhaitez patcher. Lancez le patcheur, sélectionnez le patch, regardez les instructions ci-dessous, et suivez les indications du patcheur.
@@ -18,21 +22,13 @@ Récupérez le patcheur de votre système d'exploitation (Si vous êtes sur macO
 ### Nintendo 3DS :
 #### Prérequis :
 - Une Nintendo 3DS hackée.
-- Une ROM japonaise du jeu déchiffrée (.cia ou .3ds). L'ID du jeu est 000400000014AD00.
-<!-- - Une ROM DLC japonaise du jeu déchiffrée (.cia, facultative mais fortement recommandée). -->
+- Les ROM japonaises déchiffrées (.3ds ou .cia).
+    - Dai Gyakuten Saiban 1 (DGS1) : l'ID du jeu est 000400000014AD00, l'ID des DLC est 0004008C0014AD00
+    - Dai Gyakuten Saiban 2 (DGS2) : l'ID du jeu est 00040000001AE200
 
-Une fois le patch terminé, vous devriez voir la ROM patchée au format .cia dans le même dossier que le patcheur. Mettez-la sur la carte SD de votre 3DS et installez-la avec FBI.
+Une fois les patchs terminés (les patchs des deux jeux se font séparemment), vous devriez voir les ROMs patchées au format .cia dans le même dossier que le patcheur. Mettez-les sur la carte SD de votre 3DS et installez-les avec FBI.
 
-<!--
-**IMPORTANT** : si vous comptez jouer au DLC, il faut également suivre les étapes suivantes :
-
- 1. Récupérez le fichier luma.zip (qui se trouve avec les patches).
- 2. Extrayez-le sur la carte SD de votre 3DS de sorte à ce que les dossiers 0004008C0F14AD00 et 000400000F14AD00 se trouvent dans le dossier luma/titles (en partant de la racine de la carte SD)
- 3. Lancez le menu luma en allumant votre console tout en appuyant sur SELECT. Si ce n'est pas déjà fait, cochez "Enable game patching", puis "Save and exit".
- 
-Si en lançant le menu des DLCs, vous êtes renvoyé(e) sur l'écran titre, revérifiez les étapes 2 et 3.
-
--->
+**IMPORTANT** : afin de faire fonctionner les DLC sur votre 3DS hackée, veuillez suivre [ce guide](https://github.com/AAI-fr/DGS-FR/tree/main/docs/DLC.md).
 
 Note : les ROMs patchées ont un ID unique, donc elles ne risquent pas de rentrer en conflit avec d'autres versions du jeu.
 
@@ -90,7 +86,8 @@ Dans le terminal :
 
 **Tests et relectures** : Alexandre Ad, Alexane B., Aude-Amélie T.,
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
-Ronano, Aclios, N0vatique, Mondher, Magaster
+Ronano, Aclios, N0vatique, Mondher, Magaster, Hunty, Monkey D Subaru,
+Octi
 
 **Doublage additionnel** : Kirill Morunov
 
