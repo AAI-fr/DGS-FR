@@ -83,7 +83,7 @@ jobs:
       - name: Rassemblement des bundles
         run: |
           mkdir release
-          cp ./artifacts/patcheur_ubuntu/* ./release/
+          cp ./artifacts/patcheur_linux_steam_deck/* ./release/
           cp ./artifacts/patcheur_windows/* ./release/
           cp ./artifacts/patcheur_macos/* ./release/
           cp ./manuels_jaquettes.zip ./release/
