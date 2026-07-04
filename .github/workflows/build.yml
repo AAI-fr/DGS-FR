@@ -80,6 +80,9 @@ jobs:
       - name: Zip manuels et jaquettes
         run: zip -r manuels_jaquettes.zip manuels_jaquettes
 
+      - name: Zip patch luma
+        run: zip -r luma.zip luma
+
       - name: Rassemblement des bundles
         run: |
           mkdir release
@@ -87,6 +90,7 @@ jobs:
           cp ./artifacts/patcheur_windows/* ./release/
           cp ./artifacts/patcheur_macos/* ./release/
           cp ./manuels_jaquettes.zip ./release/
+          cp ./luma.zip ./release/
 
       - name: GitHub Release
         uses: softprops/action-gh-release@v2
