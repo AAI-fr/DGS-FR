@@ -1,3 +1,5 @@
+**IMPORTANT** : Si vous avez déjà patché le jeu et voulez le mettre à jour, référez-vous à [ce document](https://github.com/AAI-fr/DGS-FR/tree/main/docs/METTRE_A_JOUR.md).
+
 Ajout des 2 premières affaires de TCAA : Détermination (DGS2)
 
 Ajout des DLC 3DS pour Aventures (DGS1)
