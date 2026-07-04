@@ -74,6 +74,9 @@ Dans le terminal :
 
 - Les distinctions (succès Steam) obtenues ne sont pas (et ne peuvent pas être) traduites. Cela ne s'applique pas à la version Switch qui implémente les distinctions directement dans le jeu. Vous pouvez tout de même retrouver vos distinctions traduites en français dans le Contenu Spécial.
 
+## Ressources
+
+- [Explication des choix des noms](https://docs.google.com/spreadsheets/d/17xuThHw2dATl0nCYI5y2KZrS78ThjMX_Wy3tVSjlaDA)
 ## Crédits
 
 **Chef de projet** : Choky
