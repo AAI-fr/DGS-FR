@@ -90,7 +90,7 @@ Dans le terminal :
 **Tests et relectures** : Alexandre Ad, Alexane B., Aude-Amélie T.,
 Aurel_Hunty, Joe Monsters, Gunchap, Ned, Alexis TGF, Mellma,
 Ronano, Aclios, N0vatique, Mondher, Magaster, Hunty, Monkey D Subaru,
-Octi
+Octi, Perfect Link
 
 **Doublage additionnel** : Kirill Morunov
 
