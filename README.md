@@ -77,6 +77,7 @@ Dans le terminal :
 ## Ressources
 
 - [Explication des choix des noms](https://docs.google.com/spreadsheets/d/17xuThHw2dATl0nCYI5y2KZrS78ThjMX_Wy3tVSjlaDA)
+- [Disponibilité/Traduction des DLCs](https://docs.google.com/spreadsheets/d/1A3w-ZXv6BsreML0PQjoAvidsJ8duzZNggSaUwhaKDZY)
 ## Crédits
 
 **Chef de projet** : Choky
