@@ -28,7 +28,7 @@ Récupérez le patcheur de votre système d'exploitation (Si vous êtes sur macO
 
 Une fois les patchs terminés (les patchs des deux jeux se font séparemment), vous devriez voir les ROMs patchées au format .cia dans le même dossier que le patcheur. Mettez-les sur la carte SD de votre 3DS et installez-les avec FBI.
 
-**IMPORTANT** : afin de faire fonctionner les DLC sur votre 3DS hackée, veuillez suivre [ce guide](https://github.com/AAI-fr/DGS-FR/tree/main/docs/DLC.md).
+**IMPORTANT** : pour être certain que les DLCs fonctionnent correctement, veuillez suivre [ce guide](docs/DLC.md).
 
 Note : les ROMs patchées ont un ID unique, donc elles ne risquent pas de rentrer en conflit avec d'autres versions du jeu.
 

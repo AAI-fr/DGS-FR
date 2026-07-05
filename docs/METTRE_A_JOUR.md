@@ -1,7 +1,7 @@
 
 # Mettre à jour le patch
 ## Nintendo 3DS
-**IMPORTANT** : Il faut faire les étapes suivantes avant d'installer une nouvelle version du jeu pour ne pas perdre votre sauvegarde. Cette manip est destinée à être utilisée sur 3DS hackée.
+**IMPORTANT** : Si vous jouez sur 3DS hackée, il FAUT faire les étapes suivantes avant d'installer une nouvelle version du jeu pour ne pas perdre votre sauvegarde. Sur émulateur, vous pouvez simplement installer la nouvelle version.
 
  - Depuis le menu HOME, ouvrir l'app Checkpoint.
  - Si vous ne trouvez pas le jeu dans la liste, maintenez B pour la mettre à jour.
