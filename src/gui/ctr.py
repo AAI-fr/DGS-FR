@@ -14,13 +14,6 @@ class DGS1_Info:
     dlc_name = 'TCAA_AGE_Aventures_DLC_Patch_FR.cia'
     logo_path = resource_path('res/logo_dgs1.png')
     rsf_path = resource_path(Path('res', 'ctr', 'dgs1'))
-    dlc_files = [
-            'c.0000.0000001f', 'c.0001.00000001', 'c.0002.00000011', 
-            'c.0003.00000012', 'c.0004.00000013', 'c.0005.00000020', 
-            'c.0006.00000021', 'c.0007.00000022', 'c.0008.00000023', 
-            'c.0009.00000024', 'c.000a.00000025', 'c.000b.0000001a', 
-            'c.000c.0000001b', 'c.000d.0000001c', 'c.000e.0000001d', 
-            'c.000f.0000001e']
 
 class DGS2_Info:
     game_id = 0x40000001AE200
@@ -29,7 +22,6 @@ class DGS2_Info:
     dlc_name = 'TCAA_AGE_Détermination_DLC_Patch_FR.cia'
     logo_path = resource_path('res/logo_dgs2.png')
     rsf_path = resource_path(Path('res', 'ctr', 'dgs2'))
-    dlc_files = ['c.0000.00000003', 'c.0001.00000004', 'c.0002.00000005']
 
 CTRTOOL = resource_path(Path('cltools', 'ctrtool'))
 MAKEROM = resource_path(Path('cltools', 'makerom'))
@@ -69,7 +61,7 @@ class CtrWidget(QWidget):
     def get_game_path(self):
         filepath, _ = QFileDialog.getOpenFileName(
             caption='Sélectionnez la ROM japonaise du jeu.', 
-            filter="ROM 3DS (*.cia *.3ds)")
+            filter="ROM 3DS (*.cia *.3ds *.cci)")
         if filepath == '': return
         try:
             if check_rom(filepath, self.info.game_id):
@@ -88,6 +80,7 @@ class CtrWidget(QWidget):
             if check_rom(filepath, self.info.dlc_id):
                 self.dlc_rom_path = filepath
                 self.dlc_explorer.setText(self.dlc_rom_path)
+                self.button.setEnabled(True)
         except Exception as e:
             self.error_win.exec_with_text(str(e))
 
@@ -101,7 +94,7 @@ class CtrWidget(QWidget):
                 uprint('Extraction terminée !')
             if self.dlc_rom_path != '':
                 uprint('Extraction des fichiers DLC...')
-                extract_dlc_rom(CTRTOOL, self.dlc_rom_path, Path(tmp_path, 'DLC'), self.info.dlc_files, log=f)
+                extract_dlc_rom(CTRTOOL, self.dlc_rom_path, Path(tmp_path, 'DLC'), log=f)
                 uprint('Extraction terminée !')
             uprint('Patch des fichiers...')
             patch = aapatch.load(self.patch_path)
@@ -113,7 +106,7 @@ class CtrWidget(QWidget):
                 uprint('ROM construite avec succès !')
             if self.dlc_rom_path != '':
                 uprint('Reconstruction de la ROM DLC...')
-                build_dlc_cia(MAKEROM, Path(tmp_path, 'DLC'), self.info.dlc_name, self.info.rsf_path, self.info.dlc_files, log=f)
+                build_dlc_cia(MAKEROM, Path(tmp_path, 'DLC'), self.info.dlc_name, self.info.rsf_path, log=f)
                 uprint('ROM DLC construite avec succès !')
             self.success.exec_with_text('Patch appliqué avec succès.\nVous trouverez la ou les ROMs en français dans le dossier du patcheur.\nBon jeu dans la langue de Molière !')
         except Exception as e:

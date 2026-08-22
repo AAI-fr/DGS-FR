@@ -29,22 +29,22 @@ def build_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : st
         # + emanual_command
         + [ "-o", dist_path ], log)
     
-def build_dlc_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : str, files : list[str], log = None):
-    for i, file in enumerate(files):
-        idx = str(i)
+def build_dlc_cia(makerom_path : str, input_dir : str, dist_path : str, rsf_dir : str, log = None):
+    files = [file for file in Path(input_dir).iterdir() if file.is_file()]
+    cia_command = [makerom_path, "-f", "cia", "-o", dist_path, '-rsf', Path(rsf_dir, 'dlc_rom.rsf'), '-dlc']
+    for file in files:
+        _, ncch_idx, unk = file.name.split('.')
+        idx = int(ncch_idx, 16)
         ncch_command = [
             makerom_path, "-f", "ncch", "-target", "t",
             "-rsf", Path(rsf_dir, 'dlc_ncch.rsf'), 
-            "-romfs", Path(input_dir, idx, 'romfs.bin'),
-            "-o", Path(input_dir, file)
+            "-romfs", Path(input_dir, str(idx), 'romfs.bin'),
+            "-o", file
             ]
-        if i == 0:
+        if idx == 0:
             ncch_command.append("-icon")
-            ncch_command.append(Path(input_dir, idx, 'exefs', 'icon.bin'))
+            ncch_command.append(Path(input_dir, str(idx), 'exefs', 'icon.bin'))
         run_cli(ncch_command, log)
-    cia_command = [makerom_path, "-f", "cia", "-o", dist_path, '-rsf', Path(rsf_dir, 'dlc_rom.rsf'), '-dlc']
-    for file in files:
         cia_command.append('-i')
-        _, index, id = file.split('.')
-        cia_command.append(Path(input_dir, f'{file}:0x{index}:0x{id}'))
+        cia_command.append(Path(input_dir, f'{file.name}:0x{ncch_idx}:0x{unk}'))
     run_cli(cia_command, log)

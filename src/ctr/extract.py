@@ -47,16 +47,21 @@ def extract_rom(ctrtool_path : str, rom_path : str, tmp_path : str, log = None):
     else:
         extract_cci(ctrtool_path, rom_path, tmp_path, log)
     
-def extract_dlc_rom(ctrtool_path : str, cia_path : str, tmp_path : str, files : list[str], log = None):
+def extract_dlc_rom(ctrtool_path : str, cia_path : str, tmp_path : str, log = None):
     Path(tmp_path).mkdir(parents=True, exist_ok = True)
     run_cli([ctrtool_path, '-t', 'cia', f'--contents={Path(tmp_path, 'c')}', cia_path], log)
-    for i, file in enumerate(files):
-        Path(tmp_path, str(i)).mkdir(exist_ok=True)
-        run_cli([ctrtool_path, '-t', 'ncch', 
-                f'--exefs={Path(tmp_path, str(i), 'exefs.bin')}', 
-                f'--romfs={Path(tmp_path, str(i), 'romfs.bin')}',
-                Path(tmp_path, file)
-                ], log)
+    for file in Path(tmp_path).iterdir():
+        if file.is_file():
+            parts = file.name.split('.')
+            if len(parts) != 3:
+                continue
+            ncch_idx = str(int(parts[1], 16))
+            Path(tmp_path, ncch_idx).mkdir(exist_ok=True)
+            run_cli([ctrtool_path, '-t', 'ncch', 
+                    f'--exefs={Path(tmp_path, ncch_idx, 'exefs.bin')}', 
+                    f'--romfs={Path(tmp_path, ncch_idx, 'romfs.bin')}',
+                    file
+                    ], log)
     run_cli([ctrtool_path, '-t', 'exefs',
             f'--exefsdir={Path(tmp_path, '0', 'exefs')}',
             Path(tmp_path, '0', 'exefs.bin')
