@@ -1,10 +1,6 @@
 **IMPORTANT** : Si vous avez déjà patché le jeu et voulez le mettre à jour, référez-vous à [ce document](https://github.com/AAI-fr/DGS-FR/tree/main/docs/METTRE_A_JOUR.md).
 
-Ajout des 2 premières affaires de TCAA : Détermination (DGS2)
-
-Ajout des DLC 3DS pour Aventures (DGS1)
-
-Améliorations diverses pour Aventures (DGS1)
+Correction de problèmes de patch pour les versions 3DS.
 
 ### Contenu
 
@@ -19,8 +15,6 @@ Améliorations diverses pour Aventures (DGS1)
 
 ### Changements
 
-- Ajout des 2 premières affaires de Détermination (DGS2)
-- Ajout des DLC 3DS d'Aventures (DGS1)
-- Correction de coquilles (DGS1)
-- Augmentation globale de la vitesse de texte (DGS1)
-- Améliorations graphiques diverses (DGS1)
+- Amélioration de la compatibilité du patchs des DLCs (3DS)
+- Ajout de la possibilité de sélectionner des ROMs avec l'extension .cci (3DS)
+- Ajout de la possibilité de patcher les DLCs seuls (3DS)
